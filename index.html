@@ -3,121 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ErgoFinder | Ergonomic Keyboards & Mice for Arthritis Relief</title>
-    <meta name="description" content="Expert-reviewed ergonomic keyboards and mice for arthritis, RSI, and chronic hand pain. Research-backed recommendations from real users.">
-    <meta name="keywords" content="ergonomic keyboard, arthritis, RSI, carpal tunnel, ergonomic mouse, vertical mouse, hand pain, accessibility">
-    <link rel="canonical" href="https://ergofinder.app/">
+    <title>ErgoFinder | Ergonomic Keyboards & Mice for Arthritis</title>
+    <meta name="description" content="Expert-reviewed ergonomic keyboards and mice for arthritis, RSI, and chronic hand pain.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .gradient-hero { background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 100%); }
-        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -12px rgba(0,0,0,0.15); }
-        .filter-active { background: #1e3a8a; color: white; border-color: #1e3a8a !important; }
-        .product-image { width: 100%; height: 140px; object-fit: cover; }
-        .editor-border { border: 3px solid #f59e0b; }
+        .hero-gradient { background: linear-gradient(135deg, #0f172a 0%, #312e81 50%, #7c3aed 100%); }
+        .card-style { transition: all 0.3s ease; }
+        .card-style:hover { transform: translateY(-2px); box-shadow: 0 10px 40px -8px rgba(0,0,0,0.12); }
+        .filter-active { background: #4f46e5; color: white; }
+        .product-img { width: 100%; height: 150px; object-fit: contain; object-position: center; }
+        
+        .badge-elite { border-top: 3px solid #f59e0b; }
+        .badge-popular { border-top: 3px solid #3b82f6; }
+        .badge-value { border-top: 3px solid #22c55e; }
         
         @media (max-width: 768px) {
             .hero-title { font-size: 2rem; }
-            .methodology-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
         }
-        
-        .badge { font-size: 10px; letter-spacing: 0.5px; }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 text-gray-800">
     <!-- Hero -->
-    <header class="gradient-hero text-white py-20 px-4">
-        <div class="max-w-5xl mx-auto text-center">
-            <h1 class="hero-title text-4xl md:text-6xl font-bold mb-4">ErgoFinder</h1>
-            <p class="text-xl md:text-2xl font-medium opacity-90 mb-3">Ergonomic Keyboards & Mice for Arthritis Relief</p>
-            <p class="text-sm md:text-base opacity-80 max-w-2xl mx-auto mb-6">
-                We analyzed 50+ products and 10,000+ user reviews to find what actually works for arthritis, RSI, and chronic hand pain.
+    <header class="hero-gradient text-white py-16 md:py-24 px-4 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <h1 class="hero-title text-4xl md:text-6xl font-black mb-4">ErgoFinder</h1>
+            <p class="text-lg md:text-2xl font-medium mb-3 text-blue-100">Ergonomic Keyboards & Mice for Pain Relief</p>
+            <p class="text-sm md:text-base text-blue-200/80 max-w-2xl mx-auto mb-8">
+                Analyzed 50+ products and 10,000+ reviews to find what actually works for arthritis, RSI, and chronic hand pain.
             </p>
-            <div class="flex flex-wrap justify-center gap-2">
-                <span class="bg-white/20 px-3 py-1 rounded-full text-sm">✓ Low-Force Keys</span>
-                <span class="bg-white/20 px-3 py-1 rounded-full text-sm">✓ Split Designs</span>
-                <span class="bg-white/20 px-3 py-1 rounded-full text-sm">✓ 10,000+ Reviews</span>
-            </div>
+            <a href="#products" class="inline-block bg-white text-indigo-900 font-bold px-8 py-3 rounded-full hover:bg-gray-100 transition-all shadow-lg">
+                Browse Products →
+            </a>
         </div>
     </header>
 
-    <!-- Quick Stats -->
-    <section class="py-8 px-4 bg-white border-b">
+    <!-- Stats Bar -->
+    <section class="py-6 px-4 bg-white border-b shadow-sm">
         <div class="max-w-5xl mx-auto">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                <div>
-                    <div class="text-2xl md:text-3xl font-bold text-blue-800">50+</div>
-                    <div class="text-xs text-gray-500">Products</div>
+            <div class="stats-grid grid grid-cols-4 gap-2 text-center">
+                <div class="p-2">
+                    <div class="text-2xl md:text-3xl font-black text-indigo-700">50+</div>
+                    <div class="text-xs text-gray-500 font-medium">PRODUCTS</div>
                 </div>
-                <div>
-                    <div class="text-2xl md:text-3xl font-bold text-blue-800">10K+</div>
-                    <div class="text-xs text-gray-500">Reviews</div>
+                <div class="p-2">
+                    <div class="text-2xl md:text-3xl font-black text-indigo-700">10K+</div>
+                    <div class="text-xs text-gray-500 font-medium">REVIEWS</div>
                 </div>
-                <div>
-                    <div class="text-2xl md:text-3xl font-bold text-blue-800">$60</div>
-                    <div class="text-xs text-gray-500">From</div>
+                <div class="p-2">
+                    <div class="text-2xl md:text-3xl font-black text-indigo-700">$60</div>
+                    <div class="text-xs text-gray-500 font-medium">STARTING</div>
                 </div>
-                <div>
-                    <div class="text-2xl md:text-3xl font-bold text-blue-800">4.8★</div>
-                    <div class="text-xs text-gray-500">Avg Rating</div>
+                <div class="p-2">
+                    <div class="text-2xl md:text-3xl font-black text-indigo-700">4.8★</div>
+                    <div class="text-xs text-gray-500 font-medium">RATING</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Filters -->
-    <section class="py-4 px-4 bg-gray-100 sticky top-0 z-50 border-b shadow-sm">
+    <section class="py-3 px-4 bg-gray-100 sticky top-0 z-50 border-b">
         <div class="max-w-6xl mx-auto">
-            <div class="flex flex-wrap gap-2 justify-center items-center overflow-x-auto pb-1">
-                <span class="text-xs font-medium text-gray-600 mr-2 hidden md:block">Filter:</span>
-                <button onclick="filterProducts('all')" class="filter-btn filter-active px-4 py-2 rounded-full border border-gray-300 text-sm font-medium" data-filter="all">All</button>
-                <button onclick="filterProducts('keyboard')" class="filter-btn px-4 py-2 rounded-full border border-gray-300 text-sm font-medium bg-white hover:bg-gray-50 transition-all" data-filter="keyboard">Keyboards</button>
-                <button onclick="filterProducts('mouse')" class="filter-btn px-4 py-2 rounded-full border border-gray-300 text-sm font-medium bg-white hover:bg-gray-50 transition-all" data-filter="mouse">Mice</button>
-                <button onclick="filterProducts('budget')" class="filter-btn px-4 py-2 rounded-full border border-gray-300 text-sm font-medium bg-white hover:bg-gray-50 transition-all" data-filter="budget">Under $150</button>
-                <button onclick="filterProducts('premium')" class="filter-btn px-4 py-2 rounded-full border border-gray-300 text-sm font-medium bg-white hover:bg-gray-50 transition-all" data-filter="premium">Premium</button>
+            <div class="flex gap-2 overflow-x-auto pb-1 no-scrollbar">
+                <button onclick="filterProducts('all')" class="filter-btn filter-active px-4 py-2 rounded-lg text-sm font-semibold transition-all" data-filter="all">All Products</button>
+                <button onclick="filterProducts('keyboard')" class="filter-btn px-4 py-2 rounded-lg text-sm font-semibold bg-white hover:bg-gray-200" data-filter="keyboard">Keyboards</button>
+                <button onclick="filterProducts('mouse')" class="filter-btn px-4 py-2 rounded-lg text-sm font-semibold bg-white hover:bg-gray-200" data-filter="mouse">Mice</button>
+                <button onclick="filterProducts('budget')" class="filter-btn px-4 py-2 rounded-lg text-sm font-semibold bg-white hover:bg-gray-200" data-filter="budget">Under $150</button>
+                <button onclick="filterProducts('premium')" class="filter-btn px-4 py-2 rounded-lg text-sm font-semibold bg-white hover:bg-gray-200" data-filter="premium">Premium</button>
             </div>
         </div>
     </section>
 
-    <!-- Top Picks - Editor's Choice Highlighted -->
-    <section class="py-8 px-4 bg-amber-50">
+    <!-- Top Picks -->
+    <section class="py-10 px-4">
         <div class="max-w-6xl mx-auto">
-            <div class="flex items-center gap-2 mb-4">
-                <span class="text-2xl">🏆</span>
-                <h2 class="text-xl font-bold text-gray-800">Top Picks for Severe Hand Pain</h2>
+            <div class="flex items-center gap-2 mb-6">
+                <span class="text-3xl">🏆</span>
+                <h2 class="text-2xl font-black text-gray-800">Top Picks for Severe Hand Pain</h2>
             </div>
-            <p class="text-sm text-gray-600 mb-4">For users with advanced arthritis or severe RSI, these keyboards provide maximum ergonomic benefit:</p>
-            <div id="top-picks" class="grid md:grid-cols-3 gap-4"></div>
+            <div id="top-picks" class="grid md:grid-cols-3 gap-5"></div>
         </div>
     </section>
 
-    <!-- Keyboards -->
-    <main class="py-8 px-4">
+    <!-- Products -->
+    <main id="products" class="py-10 px-4">
         <div class="max-w-6xl mx-auto">
-            <h2 id="keyboards-heading" class="text-2xl font-bold mb-4 text-gray-800 flex items-center gap-2">⌨️ Ergonomic Keyboards</h2>
-            <div id="keyboards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12"></div>
+            <h2 id="keyboards-heading" class="text-2xl font-black mb-5 text-gray-800 flex items-center gap-2">⌨️ Ergonomic Keyboards</h2>
+            <div id="keyboards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12"></div>
             
-            <h2 id="mice-heading" class="text-2xl font-bold mb-4 text-gray-800 flex items-center gap-2">🖱️ Ergonomic Mice</h2>
-            <div id="mice" class="grid md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+            <h2 id="mice-heading" class="text-2xl font-black mb-5 text-gray-800 flex items-center gap-2">🖱️ Ergonomic Mice</h2>
+            <div id="mice" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
         </div>
     </main>
 
-    <!-- Comparison Table -->
-    <section class="py-10 px-4 bg-white border-t">
+    <!-- Comparison -->
+    <section class="py-12 px-4 bg-white border-t">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-2xl font-bold mb-6 text-gray-800">📊 Quick Comparison</h2>
-            <div class="overflow-x-auto">
+            <h2 class="text-2xl font-black mb-6 text-gray-800">📊 Quick Comparison</h2>
+            <div class="overflow-x-auto rounded-lg border shadow-sm">
                 <table class="w-full text-sm">
-                    <thead class="bg-gray-100">
+                    <thead class="bg-indigo-900 text-white">
                         <tr>
-                            <th class="px-3 py-2 text-left">Product</th>
-                            <th class="px-3 py-2 text-center">Price</th>
-                            <th class="px-3 py-2 text-center">Type</th>
-                            <th class="px-3 py-2 text-center">Force</th>
-                            <th class="px-3 py-2 text-center">Rating</th>
-                            <th class="px-3 py-2 text-center">Best For</th>
+                            <th class="px-4 py-3 text-left font-semibold">Product</th>
+                            <th class="px-4 py-3 text-center font-semibold">Price</th>
+                            <th class="px-4 py-3 text-center font-semibold">Type</th>
+                            <th class="px-4 py-3 text-center font-semibold">Key Force</th>
+                            <th class="px-4 py-3 text-center font-semibold">Rating</th>
+                            <th class="px-4 py-3 text-center font-semibold">Best For</th>
                         </tr>
                     </thead>
                     <tbody id="comparison-table"></tbody>
@@ -127,198 +124,91 @@
     </section>
 
     <!-- SEO Content -->
-    <section class="py-10 px-4 bg-gray-50">
+    <section class="py-12 px-4 bg-gray-50">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">Best Ergonomic Keyboards for Arthritis Sufferers</h2>
-            <p class="text-gray-600 mb-4">
-                Finding the right ergonomic keyboard for arthritis can be life-changing. After analyzing dozens of products and thousands of user reviews, we've identified the top performers that deliver real relief. Look for split designs, low-force switches (35-45g), and adjustable tenting for maximum comfort.
-            </p>
-            <h3 class="text-xl font-bold mb-2 text-gray-800">Best for Severe Arthritis</h3>
-            <p class="text-gray-600 mb-4">
-                The Kinesis Advantage360 offers the highest ergonomic performance with concave wells separating each key. Ideal for users with severe RSI or advanced arthritis who need maximum relief.
-            </p>
-            <h3 class="text-xl font-bold mb-2 text-gray-800">Best Budget Option</h3>
-            <p class="text-gray-600 mb-4">
-                The Microsoft Sculpt Ergonomic provides immediate relief without the learning curve. Perfect for office workers or anyone seeking plug-and-play comfort without the expense.
-            </p>
-            <h2 class="text-2xl font-bold mb-4 text-gray-800">Vertical Mice for Wrist Pain Relief</h2>
-            <p class="text-gray-600 mb-4">
-                Vertical mice put your forearm in a neutral handshake position, ending the twisting that causes carpal tunnel and wrist pain. Our top picks include Logitech MX Vertical (mainstream quality) and Logitech Lift for smaller hands.
-            </p>
-            <p class="text-gray-600">
-                Whether dealing with rheumatoid arthritis, osteoarthritis, RSI, or general hand fatigue, the right ergonomic setup makes all the difference.
-            </p>
+            <p class="text-gray-600 mb-4">Finding relief means choosing the right tools. Analyzing 10,000+ reviews, we've identified keyboards with split designs, low-force switches (35-45g), and adjustable tenting that deliver real pain relief.</p>
+            <h3 class="text-lg font-bold mb-2 text-gray-800">Best for Severe Arthritis</h3>
+            <p class="text-gray-600 mb-4">Kinesis Advantage360 offers the highest ergonomic performance with concave wells. Ideal for severe RSI or advanced arthritis.</p>
+            <h3 class="text-lg font-bold mb-2 text-gray-800">Budget Pick</h3>
+            <p class="text-gray-600 mb-4">Microsoft Sculpt Ergonomic provides immediate relief without the learning curve. Perfect for office workers seeking plug-and-play comfort.</p>
+            <h2 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Vertical Mice for Wrist Pain</h2>
+            <p class="text-gray-600 mb-4">Vertical mice end the forearm twisting that causes carpal tunnel. Logitech MX Vertical (mainstream) and Logitech Lift (smaller hands) are our top recommendations.</p>
         </div>
     </section>
 
-    <!-- Affiliate Disclosure -->
-    <section class="gradient-hero text-white py-10 px-4">
+    <!-- CTA -->
+    <section class="hero-gradient text-white py-12 px-4">
         <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-xl font-bold mb-3">Found This Helpful?</h2>
-            <p class="text-sm opacity-90 mb-4">
-                We may earn a commission from purchases. This keeps our research free and supports ongoing testing.
-            </p>
-            <a href="#products" class="inline-block bg-white text-blue-800 font-semibold px-6 py-2 rounded-full hover:bg-gray-100">Browse All Products</a>
+            <h2 class="text-2xl font-bold mb-3">Find Your Perfect Setup</h2>
+            <p class="text-sm opacity-90 mb-5">We earn a commission from purchases. This keeps our research free.</p>
+            <a href="#products" class="inline-block bg-white text-indigo-900 font-bold px-8 py-3 rounded-full hover:bg-gray-100">Browse Products →</a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-6 px-4 text-center text-sm">
+    <footer class="bg-gray-900 text-blue-200/60 py-6 px-4 text-center text-sm">
         <p>© 2024 ErgoFinder | Independent ergonomic research</p>
-        <p class="text-xs mt-1 opacity-60">Not medical advice. Consult professionals for ergonomic guidance.</p>
+        <p class="text-xs mt-1 opacity-40">Not medical advice. Consult professionals.</p>
     </footer>
 
     <script>
         const GITHUB_PATH = window.location.pathname.includes('/Ergo/') ? '/Ergo' : '';
         
-        const getImage = (file) => `${GITHUB_PATH}${file}`;
-        
         const products = [
-            {
-                id: 1, name: "Kinesis Advantage360", type: "keyboard", badge: "EDITOR'S CHOICE", badgeColor: "bg-amber-500", badgeClass: "editor-border",
-                price: 449, priceDisplay: "$449", rating: 4.9, budget: false, image: "k360.jpg",
-                features: ["Split", "Concave Wells", "Programmable", "Tenting 0-30°"],
-                specs: { force: "45g Cherry MX", wireless: "Bluetooth/USB-C" }, bestFor: "Severe arthritis",
-                pros: ["Maximum ergonomics", "Fully programmable", "Premium build"],
-                cons: ["Expensive", "Learning curve", "Requires setup"],
-                reviews: ["Game changer for RSI - constant pain to almost none", "Worth every penny for relief", "2 weeks adjustment, never went back"],
-                link: "https://www.amazon.com/KINESIS-Advantage360-Professional/dp/B0BCHMGZMD"
-            },
-            {
-                id: 2, name: "Logitech MX Vertical", type: "mouse", badge: "MOST POPULAR", badgeColor: "bg-blue-500",
-                price: 100, priceDisplay: "$100", rating: 4.6, budget: true, image: "mx-vert.jpg",
-                features: ["57° Vertical", "Handshake Grip", "Wireless", "Quiet"],
-                specs: { force: "Natural position", wireless: "Bluetooth/USB" }, bestFor: "Most users",
-                pros: ["Mainstream quality", "Comfortable", "Good battery"],
-                cons: ["Expensive", "Small grip", "Fixed angle"],
-                reviews: ["Vertical grip eliminated wrist pain", "Changed my work life"],
-                link: "https://www.amazon.com/Logitech-Vertical-Ergonomic-Ergonomic/dp/B07JZGMLL2"
-            },
-            {
-                id: 3, name: "ZSA Moonlander", type: "keyboard", badge: null,
-                price: 365, priceDisplay: "$365", rating: 4.8, budget: false, image: "moonlander.jpg",
-                features: ["Split", "Ortholinear", "Hot-swap", "Configurator"],
-                specs: { force: "35-45g", wireless: "USB-C" }, bestFor: "Programmers",
-                pros: ["Incredible configurator", "Open-source", "Quality build"],
-                cons: ["Wireless costs extra", "Steep curve", "Premium"],
-                reviews: ["Configuration options incredible", "Hot-swappable switches"],
-                link: "https://www.amazon.com/ZSA-Moonlander-Mechanical-Programmable/dp/B0BCZB4L2F"
-            },
-            {
-                id: 4, name: "Microsoft Sculpt Ergonomic", type: "keyboard", badge: "BUDGET PICK", badgeColor: "bg-green-500",
-                price: 60, priceDisplay: "$60", rating: 4.2, budget: true, image: null,
-                features: ["Split Dome", "Palm Rest", "Wireless", "Easy Setup"],
-                specs: { force: "~55g scissor", wireless: "2.4GHz" }, bestFor: "Beginners",
-                pros: ["Budget friendly", "Immediate comfort", "Great rest"],
-                cons: ["Membrane feel", "Not programmable"],
-                reviews: ["Changed my life - less pain", "Zero learning curve"],
-                link: "https://www.amazon.com/Microsoft-Sculpt-Ergonomic-Desktop/dp/B009KU8M72"
-            },
-            {
-                id: 5, name: "Logitech Lift", type: "mouse", badge: null,
-                price: 70, priceDisplay: "$70", rating: 4.5, budget: true, image: "lift.jpg",
-                features: ["Vertical", "Small Hands", "Quiet", "Wireless"],
-                specs: { force: "Compact vertical", wireless: "Bluetooth" }, bestFor: "Small hands",
-                pros: ["Perfect for small hands", "Quiet", "Quality"],
-                cons: ["Too small for big hands", "No thumb rest"],
-                reviews: ["Finally a mouse that fits", "More comfortable than expected"],
-                link: "https://www.amazon.com/Logitech-Lift-Vertical-Ergonomic-Mouse/dp/B09S4M6L8J"
-            },
-            {
-                id: 6, name: "Logitech MX Master 3S", type: "mouse", badge: null,
-                price: 100, priceDisplay: "$100", rating: 4.7, budget: true, image: "mx3s.jpg",
-                features: ["Thumb Wheel", "8K DPI", "Quiet", "Multi-Device"],
-                specs: { force: "Traditional", wireless: "Bluetooth/USB" }, bestFor: "Power users",
-                pros: ["Thumb wheel amazing", "Quiet clicks", "Premium"],
-                cons: ["Not vertical", "Regular grip"],
-                reviews: ["Thumb wheel makes it worth it", "Quiet + thumb wheel = bliss"],
-                link: "https://www.amazon.com/Logitech-Master-Advanced-Wireless-Mouse/dp/B0BTGKH6JD"
-            },
-            {
-                id: 7, name: "Evoluent VerticalMouse 4", type: "mouse", badge: null,
-                price: 90, priceDisplay: "$90", rating: 4.4, budget: true, image: null,
-                features: ["90° Vertical", "Thumb Rest", "Wired/Wireless"],
-                specs: { force: "True vertical", wireless: "Both options" }, bestFor: "Purists",
-                pros: ["True vertical angle", "Thumb support"],
-                cons: ["Unusual look", "Takes adjustment"],
-                reviews: ["Original vertical mouse works", "Thumb rest essential"],
-                link: "https://www.amazon.com/Evoluent-VerticalMouse-Ergonomic/dp/B0058XK4V2"
-            },
-            {
-                id: 8, name: "Kensington Expert Trackball", type: "mouse", badge: "FOR SEVERE PAIN", badgeColor: "bg-red-500",
-                price: 80, priceDisplay: "$80", rating: 4.5, budget: true, image: null,
-                features: ["Trackball", "No Wrist Motion", "Scroll Ring"],
-                specs: { force: "Finger-only", wireless: "USB" }, bestFor: "Severe RSI",
-                pros: ["Zero wrist strain", "Fingers only", "Precise"],
-                cons: ["Learning curve", "Not for everyone"],
-                reviews: ["Fingers do all the work - shoulder fine", "Took 3 days, now can't imagine back"],
-                link: "https://www.amazon.com/Kensington-Ergonomic-Trackball/dp/B001F5RVLG"
-            },
-            {
-                id: 9, name: "MoErgo Glove80", type: "keyboard", badge: null,
-                price: 399, priceDisplay: "$399", rating: 4.7, budget: false, image: null,
-                features: ["Split", "Contoured", "Wireless", "Compact"],
-                specs: { force: "35g", wireless: "Bluetooth" }, bestFor: "Portability",
-                pros: ["Wireless + ergo", "Contoured hand shape", "Compact"],
-                reviews: ["Wireless ergonomic possible", "Contour perfect for hands"],
-                link: "https://www.amazon.com/Glove80-Ergonomic-Programmable-Keyboard/dp/B0CZZ5K7V9"
-            },
-            {
-                id: 10, name: "Logiteh Ergo K860", type: "keyboard", badge: "EASY SETUP", badgeColor: "bg-indigo-500",
-                price: 130, priceDisplay: "$130", rating: 4.4, budget: true, image: null,
-                features: ["Split Curved", "Palm Rest", "Wireless"],
-                specs: { force: "~55g", wireless: "Bluetooth" }, bestFor: "Office",
-                pros: ["Mainstream quality", "Immediate comfort"],
-                reviews: ["Best mainstream ergo option", "Typing hours no longer hurts"],
-                link: "https://www.amazon.com/Logitech-K860-Ergonomic-Wireless/dp/B07S6KSK2L"
-            },
-            {
-                id: 11, name: "Keebio Iris", type: "keyboard", badge: "DIY VALUE", badgeColor: "bg-purple-500",
-                price: 170, priceDisplay: "~$170", rating: 4.3, budget: false, image: null,
-                features: ["Split", "Compact", "Hot-swap", "DIY"],
-                specs: { force: "Varies", wireless: "USB" }, bestFor: "Enthusiasts",
-                pros: ["Affordable split", "Fully configurable"],
-                reviews: ["Affordable ergo entry", "Building was fun, now use daily"],
-                link: "https://keeb.io/products/iris-split-keyboard"
-            },
-            {
-                id: 12, name: "3M Ergonomic Mouse", type: "mouse", badge: "TINY PRICE", badgeColor: "bg-cyan-500",
-                price: 50, priceDisplay: "$50", rating: 3.8, budget: true, image: null,
-                features: ["Joystick Style", "Vertical", "Entry"],
-                specs: { force: "Light touch", wireless: "USB" }, bestFor: "Testing",
-                pros: ["Cheap entry point"],
-                reviews: ["Cheap way to try vertical"],
-                link: "https://www.amazon.com/3M-Ergonomic-Mouse/dp/B0008183FG"
-            }
+            { id: 1, name: "Kinesis Advantage360", type: "keyboard", badge: "EDITOR'S CHOICE", badgeClass: "badge-elite",
+              price: 449, priceDisplay: "$449", rating: 4.9, budget: false, image: "k360.jpg", bestFor: "Severe arthritis",
+              features: ["Split", "Concave Wells", "Programmable", "Tenting 0-30°"], specs: { force: "45g", wireless: "Bluetooth/USB" },
+              link: "https://www.amazon.com/KINESIS-Advantage360-Professional/dp/B0BCHMGZMD" },
+            { id: 2, name: "Logitech MX Vertical", type: "mouse", badge: "MOST POPULAR", badgeClass: "badge-popular",
+              price: 100, priceDisplay: "$100", rating: 4.6, budget: true, image: null, bestFor: "Most users",
+              features: ["57° Vertical", "Handshake Grip", "Wireless", "Quiet"], link: "https://www.amazon.com/Logitech-Vertical-Ergonomic-Ergonomic/dp/B07JZGMLL2" },
+            { id: 3, name: "ZSA Moonlander", type: "keyboard", badge: null,
+              price: 365, priceDisplay: "$365", rating: 4.8, budget: false, image: "moonlander.jpg", bestFor: "Programmers",
+              features: ["Split", "Ortholinear", "Hot-swap", "Configurator"], link: "https://www.amazon.com/ZSA-Moonlander-Mechanical-Programmable/dp/B0BCZB4L2F" },
+            { id: 4, name: "Microsoft Sculpt Ergonomic", type: "keyboard", badge: "BUDGET PICK", badgeClass: "badge-value",
+              price: 60, priceDisplay: "$60", rating: 4.2, budget: true, image: null, bestFor: "Beginners",
+              features: ["Split Dome", "Palm Rest", "Wireless", "Easy Setup"], link: "https://www.amazon.com/Microsoft-Sculpt-Ergonomic-Desktop/dp/B009KU8M72" },
+            { id: 5, name: "Logitech Lift", type: "mouse", badge: null, price: 70, priceDisplay: "$70", rating: 4.5, budget: true, image: "lift.jpg",
+              bestFor: "Small hands", features: ["Vertical", "Quiet", "Wireless"], link: "https://www.amazon.com/Logitech-Lift-Vertical-Ergonomic-Mouse/dp/B09S4M6L8J" },
+            { id: 6, name: "Logitech MX Master 3S", type: "mouse", badge: null, price: 100, priceDisplay: "$100", rating: 4.7, budget: true, image: "mx3s.jpg",
+              bestFor: "Power users", features: ["Thumb Wheel", "8K DPI", "Quiet"], link: "https://www.amazon.com/Logitech-Master-Advanced-Wireless-Mouse/dp/B0BTGKH6JD" },
+            { id: 7, name: "Evoluent VerticalMouse 4", type: "mouse", badge: null, price: 90, priceDisplay: "$90", rating: 4.4, budget: true, image: null,
+              bestFor: "Purists", features: ["90° Vertical", "Thumb Rest"], link: "https://www.amazon.com/Evoluent-VerticalMouse-Ergonomic/dp/B0058XK4V2" },
+            { id: 8, name: "Kensington Expert Trackball", type: "mouse", badge: null, price: 80, priceDisplay: "$80", rating: 4.5, budget: true, image: null,
+              bestFor: "Severe RSI", features: ["Trackball", "No Wrist Motion"], link: "https://www.amazon.com/Kensington-Ergonomic-Trackball/dp/B001F5RVLG" },
+            { id: 9, name: "MoErgo Glove80", type: "keyboard", badge: null, price: 399, priceDisplay: "$399", rating: 4.7, budget: false, image: null,
+              bestFor: "Portability", features: ["Split", "Contoured", "Wireless"], link: "https://www.amazon.com/Glove80-Ergonomic-Programmable-Keyboard/dp/B0CZZ5K7V9" },
+            { id: 10, name: "Logitech Ergo K860", type: "keyboard", badge: "EASY SETUP", badgeClass: "bg-indigo-500",
+              price: 130, priceDisplay: "$130", rating: 4.4, budget: true, image: null, bestFor: "Office",
+              features: ["Split Curved", "Palm Rest", "Wireless"], link: "https://www.amazon.com/Logitech-K860-Ergonomic-Wireless/dp/B07S6KSK2L" },
+            { id: 11, name: "Keebio Iris", type: "keyboard", badge: null, price: 170, priceDisplay: "~$170", rating: 4.3, budget: false, image: null,
+              bestFor: "Enthusiasts", features: ["Split", "Hot-swap", "DIY"], link: "https://keeb.io/products/iris-split-keyboard" },
+            { id: 12, name: "3M Ergonomic Mouse", type: "mouse", badge: null, price: 50, priceDisplay: "$50", rating: 3.8, budget: true, image: null,
+              bestFor: "Trying vertical", features: ["Joystick", "Entry"], link: "https://www.amazon.com/3M-Ergonomic-Mouse/dp/B0008183FG" }
         ];
 
         function stars(r) {
-            const f = Math.floor(r);
-            return '★'.repeat(f) + '☆'.repeat(5-f);
+            return '★'.repeat(Math.floor(r)) + '☆'.repeat(5 - Math.floor(r));
         }
 
         function renderProduct(p) {
             const img = p.image ? getImage(p.image) : null;
-            const badge = p.badge ? `<span class="absolute top-2 left-2 ${p.badgeColor} text-white px-2 py-0.5 badge font-bold">${p.badge}</span>` : '';
-            const borderClass = p.badgeClass || '';
+            const badge = p.badge ? `<div class="bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-2 py-0.5 uppercase tracking-wide">${p.badge}</div>` : '';
             
             return `
-                <div class="product-card bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all border border-gray-100 ${borderClass}" 
+                <div class="product-card bg-white rounded-xl shadow-sm border border-gray-100 card-style overflow-hidden ${p.badgeClass || ''}"
                      data-type="${p.type}" data-budget="${p.budget}">
-                    <div class="relative">
-                        ${badge}
-                        ${img ? `<img src="${img}" alt="${p.name}" class="product-image bg-gray-100">` : 
-                        `<div class="product-image bg-gray-100 text-gray-400 text-4xl flex items-center justify-center">${p.type === 'keyboard' ? '⌨️' : '🖱️'}</div>`}
-                        <span class="absolute top-2 right-2 bg-white/90 px-2 py-0.5 rounded-full text-sm font-bold text-blue-800">${p.priceDisplay}</span>
-                        <span class="absolute bottom-2">
-                            <span class="bg-yellow-400 text-yellow-900 px-2 py-0.5 rounded-full text-sm">${stars(p.rating)}</span>
-                        </span>
-                    </div>
-                    <div class="p-3">
-                        <h3 class="font-bold text-gray-800 mb-1">${p.name}</h3>
-                        <p class="text-xs text-gray-500 mb-2">${p.features.slice(0,3).join(' • ')}</p>
-                        <p class="text-xs text-gray-600"><strong>Best for:</strong> ${p.bestFor}</p>
-                        <a href="${p.link}" target="_blank" class="block text-center bg-blue-800 hover:bg-blue-900 text-white font-semibold py-1.5 rounded-lg text-sm mt-2">
+                    ${badge}
+                    <div class="p-5">
+                        ${img ? `<img src="${img}" alt="${p.name}" class="product-img mb-3">` : ''}
+                        <h3 class="font-bold text-gray-900 mb-2">${p.name}</h3>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-xl font-black text-indigo-600">${p.priceDisplay}</span>
+                            <span class="text-yellow-500 font-bold">${stars(p.rating)}</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-3">${p.features.slice(0,2).join(' • ')}</p>
+                        <p class="text-sm text-gray-600 mb-3"><strong>Best for:</strong> ${p.bestFor}</p>
+                        <a href="${p.link}" target="_blank" class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 rounded-lg text-sm transition-all">
                             View →
                         </a>
                     </div>
@@ -337,17 +227,16 @@
         }
 
         function renderComparison() {
-            const table = products.slice(0, 8).map(p => `
-                <tr class="border-b">
-                    <td class="px-3 py-2 font-medium">${p.name}</td>
-                    <td class="px-3 py-2 text-center">${p.priceDisplay}</td>
-                    <td class="px-3 py-2 text-center capitalized">${p.type.replace('keyboard', 'Keyboard')}</td>
-                    <td class="px-3 py-2 text-center">${p.specs.force}</td>
-                    <td class="px-3 py-2 text-center">${stars(p.rating)}</td>
-                    <td class="px-3 py-2 text-center text-xs text-gray-600">${p.bestFor}</td>
+            document.getElementById('comparison-table').innerHTML = products.slice(0, 6).map(p => `
+                <tr class="border-b hover:bg-gray-50">
+                    <td class="px-4 py-2 font-medium">${p.name}</td>
+                    <td class="px-4 py-2 text-center">${p.priceDisplay}</td>
+                    <td class="px-4 py-2 text-center capitalize">${p.type.replace('keyboard', 'Keyboard')}</td>
+                    <td class="px-4 py-2 text-center">${p.specs?.force || '-'}</td>
+                    <td class="px-4 py-2 text-center text-yellow-500">${stars(p.rating)}</td>
+                    <td class="px-4 py-2 text-center text-xs text-gray-600">${p.bestFor}</td>
                 </tr>
             `).join('');
-            document.getElementById('comparison-table').innerHTML = table;
         }
 
         function filterProducts(filter) {
@@ -369,10 +258,8 @@
                 card.style.display = show ? 'block' : 'none';
             });
 
-            const keyboardHeading = document.getElementById('keyboards-heading');
-            const mouseHeading = document.getElementById('mice-heading');
-            keyboardHeading.style.display = filter === 'mouse' ? 'none' : 'flex';
-            mouseHeading.style.display = filter === 'keyboard' ? 'none' : 'flex';
+            document.getElementById('keyboards-heading').style.display = filter === 'mouse' ? 'none' : 'flex';
+            document.getElementById('mice-heading').style.display = filter === 'keyboard' ? 'none' : 'flex';
         }
 
         renderTopPicks();
