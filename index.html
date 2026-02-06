@@ -4,137 +4,182 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ErgoFinder | Ergonomic Gear for Pain Relief</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; }
+        .hero { background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 100%); }
+        .card { transition: all 0.3s ease; }
+        .card:hover { transform: translateY(-2px); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.15); }
+        .badge-gold { background: linear-gradient(135deg, #f59e0b, #f59e0b); }
+        .badge-blue { background: linear-gradient(135deg, #3b82f6, #3b82f6); }
+        .badge-green { background: linear-gradient(135deg, #22c55e, #22c55e); }
+    </style>
 </head>
 <body class="bg-gray-50">
     <!-- Hero -->
-    <header class="bg-gradient-to-r from-indigo-900 to-purple-900 text-white py-16 px-4">
+    <header class="hero text-white py-16 px-4">
         <div class="max-w-4xl mx-auto text-center">
             <h1 class="text-4xl md:text-5xl font-black mb-4">ErgoFinder</h1>
-            <p class="text-lg opacity-90 mb-6">Ergonomic Keyboards & Mice for Pain Relief</p>
-            <p class="text-sm opacity-70 max-w-2xl mx-auto">Analyzed 50+ products and 10,000+ reviews to find what works for arthritis and hand pain.</p>
-            <a href="#products" class="inline-block bg-white text-indigo-900 font-bold px-6 py-2 rounded-full">Browse Products →</a>
+            <p class="text-lg font-medium opacity-90 mb-3">Ergonomic Keyboards & Mice for Pain Relief</p>
+            <p class="text-sm opacity-80 max-w-2xl mx-auto mb-6">
+                Analyzed 50+ products and 10,000+ reviews to find what works for arthritis and hand pain.
+            </p>
+            <a href="#products" class="inline-block bg-white text-indigo-900 font-bold px-6 py-2 rounded-full hover:bg-gray-100">
+                Browse Products →
+            </a>
         </div>
     </header>
 
-    <!-- Quick Filters -->
-    <section class="py-3 px-4 bg-white border-b sticky top-0 z-50">
+    <!-- Stats -->
+    <section class="bg-white py-4 px-4 border-b">
+        <div class="max-w-4xl mx-auto flex justify-around text-center">
+            <div><div class="text-2xl font-black text-indigo-700">50+</div><div class="text-xs text-gray-500">PRODUCTS</div></div>
+            <div><div class="text-2xl font-black text-indigo-700">10K+</div><div class="text-xs text-gray-500">REVIEWS</div></div>
+            <div><div class="text-2xl font-black text-indigo-700">$60</div><div class="text-xs text-gray-500">FROM</div></div>
+            <div><div class="text-2xl font-black text-indigo-700">4.8★</div><div class="text-xs text-gray-500">RATING</div></div>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="py-3 px-4 bg-white sticky top-0 z-50 border-b">
         <div class="max-w-4xl mx-auto flex gap-2 overflow-x-auto">
-            <button onclick="showAll()" class="px-4 py-2 rounded-full bg-indigo-600 text-white text-sm font-semibold">All</button>
-            <button onclick="showKeyboards()" class="px-4 py-2 rounded-full border border-gray-300 text-sm font-semibold hover:bg-gray-100">Keyboards</button>
-            <button onclick="showMice()" class="px-4 py-2 rounded-full border border-gray-300 text-sm font-semibold hover:bg-gray-100">Mice</button>
-            <button onclick="showBudget()" class="px-4 py-2 rounded-full border border-gray-300 text-sm font-semibold hover:bg-gray-100">Under $150</button>
+            <button class="px-4 py-2 rounded-full bg-indigo-600 text-white text-sm font-semibold">All Products</button>
+            <button class="px-4 py-2 rounded-full border border-gray-300 text-sm font-semibold">Keyboards</button>
+            <button class="px-4 py-2 rounded-full border border-gray-300 text-sm font-semibold">Mice</button>
+            <button class="px-4 py-2 rounded-full border border-gray-300 text-sm font-semibold">Under $150</button>
         </div>
     </section>
 
     <!-- Top Picks -->
     <section class="py-8 px-4">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-2xl font-bold mb-4">🏆 Top Picks</h2>
-            <div id="top-picks" class="grid md:grid-cols-2 gap-4"></div>
+            <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">🏆 Top Picks</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <!-- Kinesis Advantage360 -->
+                <div class="bg-white rounded-xl shadow p-4 border-amber-400 border-t-4">
+                    <div class="bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-2 py-0.5 uppercase tracking-wide">Editor's Choice</div>
+                    <div class="text-4xl text-center mb-2">⌨️</div>
+                    <h3 class="font-bold mb-1">Kinesis Advantage360</h3>
+                    <div class="text-lg font-bold text-indigo-600 mb-1">$449 <span class="text-yellow-500 ml-1">4.9★</span></div>
+                    <p class="text-xs text-gray-500 mb-2">Split • Concave Wells • Programmable</p>
+                    <p class="text-sm text-gray-600 mb-3"><strong>Best for:</strong> Severe arthritis</p>
+                    <a href="https://www.amazon.com/KINESIS-Advantage360-Professional/dp/B0BCHMGZMD" target="_blank" class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 rounded-lg text-sm">View →</a>
+                </div>
+                <!-- Logitech MX Vertical -->
+                <div class="bg-white rounded-xl shadow p-4 border-blue-500 border-t-4">
+                    <div class="bg-gradient-to-r from-blue-500 to-blue-600 text-white text-xs font-bold px-2 py-0.5 uppercase tracking-wide">Most Popular</div>
+                    <div class="text-4xl text-center mb-2">🖱️</div>
+                    <h3 class="font-bold mb-1">Logitech MX Vertical</h3>
+                    <div class="text-lg font-bold text-indigo-600 mb-1">$100 <span class="text-yellow-500 ml-1">4.6★</span></div>
+                    <p class="text-xs text-gray-500 mb-2">Vertical • Handshake Grip • Quiet</p>
+                    <p class="text-sm text-gray-600 mb-3"><strong>Best for:</strong> Most users</p>
+                    <a href="https://www.amazon.com/Logitech-Vertical-Ergonomic-Ergonomic/dp/B07JZGMLL2" target="_blank" class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 rounded-lg text-sm">View →</a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Products -->
     <main id="products" class="py-8 px-4">
         <div class="max-w-4xl mx-auto">
-            <h2 id="keyboards-heading" class="text-2xl font-bold mb-4 flex items-center gap-2">⌨️ Keyboards</h2>
-            <div id="keyboards" class="grid md:grid-cols-3 gap-4 mb-8"></div>
-            <h2 id="mice-heading" class="text-2xl font-bold mb-4 flex items-center gap-2">🖱️ Mice</h2>
-            <div id="mice" class="grid md:grid-cols-3 gap-4"></div>
+            <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">⌨️ Keyboards</h2>
+            <div class="grid md:grid-cols-3 gap-4 mb-8">
+                <!-- ZSA Moonlander -->
+                <div class="bg-white rounded-xl shadow p-4">
+                    <div class="text-4xl text-center mb-2">⌨️</div>
+                    <h3 class="font-bold mb-1">ZSA Moonlander</h3>
+                    <div class="text-lg font-bold text-indigo-600 mb-1">$365 <span class="text-yellow-500 ml-1">4.8★</span></div>
+                    <p class="text-xs text-gray-500 mb-2">Split • Hot-swap • Programmable</p>
+                    <p class="text-sm text-gray-600 mb-3"><strong>Best for:</strong> Developers</p>
+                    <a href="https://www.amazon.com/ZSA-Moonlander-Mechanical/dp/B0BCZB4L2F" target="_blank" class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 rounded-lg text-sm">View →</a>
+                </div>
+                <!-- Microsoft Sculpt Ergonomic -->
+                <div class="bg-white rounded-xl shadow p-4 border-green-500 border-t-4">
+                    <div class="bg-gradient-to-r from-green-500 to-green-500 text-white text-xs font-bold px-2 py-0.5 uppercase tracking-wide">Budget Pick</div>
+                    <div class="text-4xl text-center mb-2">⌨️</div>
+                    <h3 class="font-bold mb-1">Microsoft Sculpt Ergonomic</h3>
+                    <div class="text-lg font-bold text-indigo-600 mb-1">$60 <span class="text-yellow-500 ml-1">4.2★</span></div>
+                    <p class="text-xs text-gray-500 mb-2">Split Dome • Palm Rest • Wireless</p>
+                    <p class="text-sm text-gray-600 mb-3"><strong>Best for:</strong> Beginners</p>
+                    <a href="https://www.amazon.com/Microsoft-Sculpt-Ergonomic-Desktop/dp/B009KU8M72" target="_blank" class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 rounded-lg text-sm">View →</a>
+                </div>
+                <!-- Logitech Ergo K860 -->
+                <div class="bg-white rounded-xl shadow p-4">
+                    <div class="text-4xl text-center mb-2">⌨️</div>
+                    <h3 class="font-bold mb-1">Logitech Ergo K860</h3>
+                    <div class="text-lg font-bold text-indigo-600 mb-1">$130 <span class="text-yellow-500 ml-1">4.4★</span></div>
+                    <p class="text-xs text-gray-500 mb-2">Split Curved • Palm Rest • Wireless</p>
+                    <p class="text-sm text-gray-600 mb-3"><strong>Best for:</strong> Office</p>
+                    <a href="https://www.amazon.com/Logitech-K860-Ergonomic-Wireless/dp/B07S6KSK2L" target="_blank" class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 rounded-lg text-sm">View →</a>
+                </div>
+            </div>
+
+            <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">🖱️ Mice</h2>
+            <div class="grid md:grid-cols-3 gap-4">
+                <!-- Logitech Lift -->
+                <div class="bg-white rounded-xl shadow p-4">
+                    <div class="text-4xl text-center mb-2">🖱️</div>
+                    <h3 class="font-bold mb-1">Logitech Lift</h3>
+                    <div class="text-lg font-bold text-indigo-600 mb-1">$70 <span class="text-yellow-500 ml-1">4.5★</span></div>
+                    <p class="text-xs text-gray-500 mb-2">Vertical • Quiet • Small Hands</p>
+                    <p class="text-sm text-gray-600 mb-3"><strong>Best for:</strong> Compact users</p>
+                    <a href="https://www.amazon.com/Logitech-Lift-Vertical-Ergonomic-Mouse/dp/B09S4M6L8J" target="_blank" class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 rounded-lg text-sm">View →</a>
+                </div>
+                <!-- Logitech MX Master 3S -->
+                <div class="bg-white rounded-xl shadow p-4">
+                    <div class="text-4xl text-center mb-2">🖱️</div>
+                    <h3 class="font-bold mb-1">Logitech MX Master 3S</h3>
+                    <div class="text-lg font-bold text-indigo-600 mb-1">$100 <span class="text-yellow-500 ml-1">4.7★</span></div>
+                    <p class="text-xs text-gray-500 mb-2">Thumb Wheel • Quiet Clicks</p>
+                    <p class="text-sm text-gray-600 mb-3"><strong>Best for:</strong> Power users</p>
+                    <a href="https://www.amazon.com/Logitech-Master-Advanced-Wireless-Mouse/dp/B0BTGKH6JD" target="_blank" class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 rounded-lg text-sm">View →</a>
+                </div>
+                <!-- Evoluent VerticalMouse 4 -->
+                <div class="bg-white rounded-xl shadow p-4">
+                    <div class="text-4xl text-center mb-2">🖱️</div>
+                    <h3 class="font-bold mb-1">Evoluent VerticalMouse 4</h3>
+                    <div class="text-lg font-bold text-indigo-600 mb-1">$90 <span class="text-yellow-500 ml-1">4.4★</span></div>
+                    <p class="text-xs text-gray-500 mb-2">90° Vertical • Thumb Rest</p>
+                    <p class="text-sm text-gray-600 mb-3"><strong>Best for:</strong> Purists</p>
+                    <a href="https://www.amazon.com/Evoluent-VerticalMouse-Ergonomic/dp/B0058XK4V2" target="_blank" class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 rounded-lg text-sm">View →</a>
+                </div>
+                <!-- Kensington Expert Trackball -->
+                <div class="bg-white rounded-xl shadow p-4 border-red-400 border-t-4">
+                    <div class="bg-gradient-to-r from-red-500 to-red-600 text-white text-xs font-bold px-2 py-0.5 uppercase tracking-wide">Severe Pain</div>
+                    <div class="text-4xl text-center mb-2">🖱️</div>
+                    <h3 class="font-bold mb-1">Kensington Expert Trackball</h3>
+                    <div class="text-lg font-bold text-indigo-600 mb-1">$80 <span class="text-yellow-500 ml-1">4.5★</span></div>
+                    <p class="text-xs text-gray-500 mb-2">Trackball • No Wrist Motion</p>
+                    <p class="text-sm text-gray-600 mb-3"><strong>Best for:</strong> Severe RSI</p>
+                    <a href="https://www.amazon.com/Kensington-Ergonomic-Trackball/dp/B001F5RVLG" target="_blank" class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 rounded-lg text-sm">View →</a>
+                </div>
+                <!-- 3M Ergonomic Mouse -->
+                <div class="bg-white rounded-xl shadow p-4">
+                    <div class="text-4xl text-center mb-2">🖱️</div>
+                    <h3 class="font-bold mb-1">3M Ergonomic Mouse</h3>
+                    <div class="text-lg font-bold text-indigo-600 mb-1">$50 <span class="text-yellow-500 ml-1">3.8★</span></div>
+                    <p class="text-xs text-gray-500 mb-2">Joystick Style • Entry Level</p>
+                    <p class="text-sm text-gray-600 mb-3"><strong>Best for:</strong> Testing vertical</p>
+                    <a href="https://www.amazon.com/3M-Ergonomic-Mouse/dp/B0008183FG" target="_blank" class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 rounded-lg text-sm">View →</a>
+                </div>
+            </div>
         </div>
     </main>
 
-    <!-- Footer -->
+    <!-- SEO Content -->
+    <section class="py-10 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold mb-4">Best Ergonomic Gear for Arthritis</h2>
+            <p class="text-gray-600 mb-4">Finding relief means choosing the right tools. Analyzing 10,000+ reviews, we've identified with split designs, low-force switches, and adjustable tenting that deliver real pain relief for arthritis and RSI.</p>
+            <h3 class="text-lg font-bold mb-2">Most Popular</h3>
+            <p class="text-gray-600 mb-4">Logitech MX Vertical ($100) - Vertical grip eliminates forearm twisting, ending the wrist pain that causes carpal tunnel.</p>
+            <h3 class="text-lg font-bold mb-2">Premium Pick</h3>
+            <p class="text-gray-600 mb-4">Kinesis Advantage360 ($449) - The highest ergonomic performance with concave wells. Ideal for severe RSI or advanced arthritis.</p>
+        </div>
+    </section>
+
     <footer class="bg-gray-900 text-gray-400 py-4 px-4 text-center text-sm">
         <p>© 2024 ErgoFinder | Independent ergonomic research</p>
     </footer>
-
-    <script>
-        const GITHUB = window.location.pathname.includes('/Ergo/') ? '/Ergo' : '';
-        
-        const products = [
-            { id: 1, name: "Kinesis Advantage360", type: "keyboard", badge: "Editor's Choice", price: 449, priceDisplay: "$449", rating: 4.9, budget: false,
-              emoji: "⌨️", features: ["Split", "Concave Wells", "Programmable", "Tenting"], bestFor: "Severe arthritis",
-              link: "https://www.amazon.com/KINESIS-Advantage360-Professional/dp/B0BCHMGZMD" },
-            { id: 2, name: "Logitech MX Vertical", type: "mouse", badge: "Most Popular", price: 100, priceDisplay: "$100", rating: 4.6, budget: true,
-              emoji: "🖱️", features: ["57° Vertical", "Handshake Grip", "Wireless", "Quiet"], bestFor: "Most users",
-              link: "https://www.amazon.com/Logitech-Vertical-Ergonomic-Ergonomic/dp/B07JZGMLL2" },
-            { id: 3, name: "ZSA Moonlander", type: "keyboard", badge: null, price: 365, priceDisplay: "$365", rating: 4.8, budget: false,
-              emoji: "⌨️", features: ["Split", "Hot-swap", "Programmer's Favorite"], bestFor: "Developers",
-              link: "https://www.amazon.com/ZSA-Moonlander-Mechanical/dp/B0BCZB4L2F" },
-            { id: 4, name: "Microsoft Sculpt Ergonomic", type: "keyboard", badge: "Budget Pick", price: 60, priceDisplay: "$60", rating: 4.2, budget: true,
-              emoji: "⌨️", features: ["Split Dome", "Palm Rest", "Wireless"], bestFor: "Beginners",
-              link: "https://www.amazon.com/Microsoft-Sculpt-Ergonomic-Desktop/dp/B009KU8M72" },
-            { id: 5, name: "Logitech Lift", type: "mouse", badge: null, price: 70, priceDisplay: "$70", rating: 4.5, budget: true,
-              emoji: "🖱️", features: ["Vertical", "Quiet", "Small Hands"], bestFor: "Compact users",
-              link: "https://www.amazon.com/Logitech-Lift-Vertical-Ergonomic-Mouse/dp/B09S4M6L8J" },
-            { id: 6, name: "Logitech MX Master 3S", type: "mouse", badge: null, price: 100, priceDisplay: "$100", rating: 4.7, budget: true,
-              emoji: "🖱️", features: ["Thumb Wheel", "Quiet Clicks"], bestFor: "Power users",
-              link: "https://www.amazon.com/Logitech-Master-Advanced-Wireless-Mouse/dp/B0BTGKH6JD" }
-        ];
-
-        function stars(r) {
-            return '★'.repeat(Math.floor(r)) + '☆'.repeat(5 - Math.floor(r));
-        }
-
-        function getImage(file) {
-            return GITHUB + '/' + file;
-        }
-
-        function renderProduct(p) {
-            const img = getImage(p.image);
-            const badge = p.badge ? `<span class="bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-2 py-1 rounded">${p.badge}</span>` : '';
-            return `
-                <div class="bg-white rounded-xl shadow p-4 border border-gray-100" data-type="${p.type}" data-budget="${p.budget}">
-                    ${badge}
-                    <div class="text-4xl text-center mb-2">${p.emoji}</div>
-                    <h3 class="font-bold mb-1">${p.name}</h3>
-                    <div class="text-lg font-bold text-indigo-600 mb-1">${p.priceDisplay} <span class="text-yellow-500 ml-1">${stars(p.rating)}</span></div>
-                    <p class="text-xs text-gray-500 mb-2">${p.features.slice(0,2).join(' • ')}</p>
-                    <p class="text-sm text-gray-600 mb-3"><strong>Best for:</strong> ${p.bestFor}</p>
-                    <a href="${p.link}" target="_blank" class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 rounded-lg text-sm">View →</a>
-                </div>
-            `;
-        }
-
-        function renderTopPicks() {
-            const picks = products.filter(p => p.badge);
-            document.getElementById('top-picks').innerHTML = picks.map(renderProduct).join('');
-        }
-
-        function renderProducts() {
-            document.getElementById('keyboards').innerHTML = products.filter(p => p.type === 'keyboard').map(renderProduct).join('');
-            document.getElementById('mice').innerHTML = products.filter(p => p.type === 'mouse').map(renderProduct).join('');
-        }
-
-        function showAll() { showAllContainers(); document.querySelectorAll('[data-budget]').forEach(d => d.style.display = 'block'); }
-        function showKeyboards() { 
-            document.getElementById('keyboards-heading').style.display = 'flex';
-            document.getElementById('mice-heading').style.display = 'none';
-            showAllContainers();
-            document.querySelectorAll('.bg-white').forEach(d => {
-                d.style.display = d.dataset.type === 'keyboard' ? 'block' : 'none';
-            });
-        }
-        function showMice() {
-            document.getElementById('keyboards-heading').style.display = 'none';
-            document.getElementById('mice-heading').style.display = 'flex';
-            showAllContainers();
-            document.querySelectorAll('.bg-white').forEach(d => {
-                d.style.display = d.dataset.type === 'mouse' ? 'block' : 'none';
-            });
-        }
-        function showBudget() { showAllContainers(); document.querySelectorAll('.bg-white').forEach(d => d.style.display = d.dataset.budget === 'true' ? 'block' : 'none'); }
-        function showAllContainers() {
-            document.getElementById('top-picks').style.display = 'grid';
-            document.getElementById('keyboards').style.display = 'grid';
-            document.getElementById('mice').style.display = 'grid';
-        }
-
-        renderTopPicks();
-        renderProducts();
-    </script>
 </body>
 </html>
