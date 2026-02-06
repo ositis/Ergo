@@ -193,14 +193,17 @@
 
         function renderProduct(p) {
             const img = p.image ? getImage(p.image) : null;
+            const emoji = p.type === 'keyboard' ? '⌨️' : '🖱️';
             const badge = p.badge ? `<div class="bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-2 py-0.5 uppercase tracking-wide">${p.badge}</div>` : '';
+            const defaultImg = `<div class="product-img mb-3 flex items-center justify-center bg-gradient-to-br from-indigo-100 to-indigo-50 text-5xl">${emoji}</div>`;
             
             return `
                 <div class="product-card bg-white rounded-xl shadow-sm border border-gray-100 card-style overflow-hidden ${p.badgeClass || ''}"
                      data-type="${p.type}" data-budget="${p.budget}">
                     ${badge}
                     <div class="p-5">
-                        ${img ? `<img src="${img}" alt="${p.name}" class="product-img mb-3">` : ''}
+                        ${img ? `<img src="${img}" alt="${p.name}" class="product-img mb-3" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">` : ''}
+                        ${!img ? defaultImg : ''}
                         <h3 class="font-bold text-gray-900 mb-2">${p.name}</h3>
                         <div class="flex items-center gap-2 mb-2">
                             <span class="text-xl font-black text-indigo-600">${p.priceDisplay}</span>
@@ -217,7 +220,10 @@
         }
 
         function renderTopPicks() {
-            const topPicks = products.filter(p => p.badge && (p.badge.includes("CHOICE") || p.badge.includes("SEVERE")));
+            const topPicks = [
+                products[0], // Kinesis - Editor's Choice
+                products[1]  // MX Vertical - Most Popular
+            ].filter(p => p); // Ensure they exist
             document.getElementById('top-picks').innerHTML = topPicks.map(renderProduct).join('');
         }
 
